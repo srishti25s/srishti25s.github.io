@@ -134,9 +134,11 @@ const CaseStudies = () => {
               I'd be happy to discuss these projects in detail and share insights 
               from my experience in fintech product management.
             </p>
-            <Button variant="outline" className="group">
-              <span>Get in touch</span>
-              <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+            <Button variant="outline" className="group" asChild>
+              <a href="mailto:srishtisrivastavapo@gmail.com?subject=Discussion about your case studies">
+                <span>Get in touch</span>
+                <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </section>
         </div>
