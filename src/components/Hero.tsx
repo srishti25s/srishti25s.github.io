@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="space-y-2">
           <p className="text-sm text-muted-foreground mb-4">👋🏻 Hello! I'm</p>
           <h1 className="text-6xl md:text-7xl font-light tracking-tight text-primary">
-            [Your Name]
+            Srishti Srivastava
           </h1>
         </div>
         
