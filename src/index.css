@@ -2,39 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Minimalistic design system inspired by ashishsalunkhe.com
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 8.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222.2 84% 8.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222.2 84% 8.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 222.2 84% 8.9%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 95%;
+    --secondary-foreground: 222.2 84% 8.9%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 220 13% 91%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 94%;
+    --accent-foreground: 222.2 84% 8.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 222.2 84% 8.9%;
+
+    /* Highlight colors for text emphasis */
+    --highlight-blue: 200 100% 70%;
+    --highlight-orange: 25 95% 65%;
+    --highlight-green: 160 84% 60%;
+    --highlight-yellow: 45 93% 65%;
 
     --radius: 0.5rem;
 
@@ -66,7 +72,7 @@ All colors MUST be HSL.
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 222.2 84% 8.9%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -83,6 +89,12 @@ All colors MUST be HSL.
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    /* Dark mode highlight colors */
+    --highlight-blue: 200 100% 60%;
+    --highlight-orange: 25 95% 55%;
+    --highlight-green: 160 84% 50%;
+    --highlight-yellow: 45 93% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +112,32 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light;
+  }
+}
+
+@layer utilities {
+  .highlight-blue {
+    @apply bg-[hsl(var(--highlight-blue))] text-primary px-1 rounded-sm;
+  }
+  
+  .highlight-orange {
+    @apply bg-[hsl(var(--highlight-orange))] text-primary px-1 rounded-sm;
+  }
+  
+  .highlight-green {
+    @apply bg-[hsl(var(--highlight-green))] text-primary px-1 rounded-sm;
+  }
+  
+  .highlight-yellow {
+    @apply bg-[hsl(var(--highlight-yellow))] text-primary px-1 rounded-sm;
+  }
+
+  .nav-link {
+    @apply relative transition-colors duration-200 hover:text-primary;
+  }
+
+  .nav-link.active::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-primary;
   }
 }
