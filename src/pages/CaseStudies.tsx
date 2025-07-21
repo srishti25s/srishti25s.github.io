@@ -54,7 +54,7 @@ const CaseStudies = () => {
       <main className="max-w-6xl mx-auto px-6 py-16">
         <div className="space-y-12">
           <section className="space-y-6 text-center">
-            <h1 className="text-4xl font-light text-primary">Case Studies</h1>
+            <h1 className="text-4xl font-light text-primary">Srishti Srivastava</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Detailed insights into product initiatives that drove measurable business impact 
               and enhanced customer experiences in fintech.
