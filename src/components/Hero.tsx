@@ -15,7 +15,7 @@ const Hero = () => {
         
         <div className="space-y-2 text-xl md:text-2xl font-light leading-relaxed">
           <p>
-            I believe <span className="highlight-blue">scalable fintech products</span> enable endless{" "}
+            I believe <span className="highlight-blue">simple scalable products</span> enable endless{" "}
             <span className="highlight-orange">possibilities</span> with
           </p>
           <p>
