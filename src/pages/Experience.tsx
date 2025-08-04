@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 const Experience = () => {
   const experiences = [
     {
-      title: "Product Owner",
+      title: "Product Manager",
       company: "BNY",
       location: "Pune, India",
       duration: "April 2022 - Current",
